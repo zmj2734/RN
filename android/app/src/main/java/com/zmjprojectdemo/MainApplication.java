@@ -14,6 +14,9 @@ import org.lovebing.reactnative.baidumap.BaiduMapPackage;
 import java.util.Arrays;
 import java.util.List;
 
+import cn.reactnative.modules.update.UpdateContext;
+import cn.reactnative.modules.update.UpdatePackage;
+
 public class MainApplication extends Application implements ReactApplication {
 
     private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -26,11 +29,18 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+                    new UpdatePackage(),
                     new BaiduMapPackage(getApplicationContext()),
                     new RNFetchBlobPackage(),
                     new RegisterReactPackage()
             );
         }
+
+        @Override
+        protected  String getJSBundleFile(){
+            return UpdateContext.getBundleUrl(MainApplication.this);
+        }
+
     };
 
     @Override
