@@ -11,6 +11,7 @@ import Progress from "../progress"
 import WebView from "./webView"
 import CircelButton from "../circle"
 import ListView from "../listView"
+import Update from "../update"
 
 var AppNavigator = StackNavigator({
         Index: {screen: HomeScreen},
@@ -20,7 +21,8 @@ var AppNavigator = StackNavigator({
         Progress: {screen: Progress},
         WebView: {screen: WebView},
         CircelButton: {screen: CircelButton},
-        ListView: {screen: ListView}
+        ListView: {screen: ListView},
+        Update: {screen: Update}
     },
     {
         initialRouteName: 'Index',

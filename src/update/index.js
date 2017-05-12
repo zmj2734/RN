@@ -6,7 +6,6 @@ import React, {
 } from 'react';
 
 import {
-    AppRegistry,
     StyleSheet,
     Platform,
     Text,
@@ -29,7 +28,7 @@ import {
 } from 'react-native-update';
 
 import _updateConfig from '../../update.json';
-const {appKey} = _updateConfig[Platform.android];
+const {appKey} = _updateConfig[Platform.OS];
 
 export default class update extends Component {
     componentWillMount(){

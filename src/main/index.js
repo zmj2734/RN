@@ -51,6 +51,10 @@ export default class index extends React.Component {
         const { navigate } = this.props.navigation;
         navigate("CircelButton")
     }
+    update(){
+        const { navigate } = this.props.navigation;
+        navigate("Update")
+    }
     render() {
         return (
             <ScrollView style={styles.listView}>
@@ -87,6 +91,11 @@ export default class index extends React.Component {
                 <View style={styles.buttonContents}>
                     <TouchableOpacity onPress={this.circelButton.bind(this)}>
                         <Text style={styles.rowText}>CircelButton</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.update.bind(this)}>
+                        <Text style={styles.rowText}>热更新</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
