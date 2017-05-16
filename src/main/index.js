@@ -10,6 +10,7 @@ import {
     StyleSheet,
 } from "react-native"
 
+import Tost from "zmj_plugin_demo"
 
 export default class index extends React.Component {
 
@@ -55,6 +56,10 @@ export default class index extends React.Component {
         const { navigate } = this.props.navigation;
         navigate("Update")
     }
+    async npmDemo(){
+        Tost.init() ;
+        console.log(Tost)
+    }
     render() {
         return (
             <ScrollView style={styles.listView}>
@@ -96,6 +101,11 @@ export default class index extends React.Component {
                 <View style={styles.buttonContents}>
                     <TouchableOpacity onPress={this.update.bind(this)}>
                         <Text style={styles.rowText}>热更新</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.npmDemo.bind(this)}>
+                        <Text style={styles.rowText}>npm插件demo</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
