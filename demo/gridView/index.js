@@ -10,7 +10,7 @@ import {
 import GridView from "../../src/gridView"
 import Image from 'react-native-image-progress' ;
 import * as Progress from 'react-native-progress' ;
-let localImage = require("../../../../assets/image/banner01.jpg")
+let localImage = require("../../image/banner01.jpg")
 export default class index extends React.Component {
 
     constructor() {
@@ -115,12 +115,6 @@ export default class index extends React.Component {
     render() {
         return (
             <View style={{flex : 1,backgroundColor : "#cfcfcf"}}>
-                <Header
-                    centerText='GridView'
-                    leftButtonFun={() => {
-                        this.goback()
-                    }}
-                />
                 {this.state.data ?
                     <GridView renderRow={this.renderRow.bind(this)}
                               dataRows={this.state.data}

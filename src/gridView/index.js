@@ -10,7 +10,7 @@ import {
     ActivityIndicator,
     TouchableOpacity,
 } from "react-native" ;
-import Theme from '../../../theme'
+import Theme from './index.css'
 import Image from 'react-native-image-progress' ;
 import * as Progress from 'react-native-progress' ;
 let allRows;
@@ -189,7 +189,7 @@ export default class index extends React.Component {
      */
     netWorkError() {
         return (
-            <View style={[Theme.ListView.styles.emptyView, this.props.emptyStyle]}>
+            <View style={[Theme.emptyView, this.props.emptyStyle]}>
                 {this.createImageView(this.state.url)}
                 <Text>{this.state.message ? this.state.message : "网络连接失败,请检查网络"}</Text>
                 <TouchableOpacity style={{marginTop: 50}} onPress={this.checkNetWork.bind(this)}>
@@ -205,7 +205,7 @@ export default class index extends React.Component {
      */
     empty() {
         return (
-            <View style={[Theme.ListView.styles.emptyView, this.props.emptyStyle]}>
+            <View style={[Theme.emptyView, this.props.emptyStyle]}>
                 {this.createImageView(this.state.url)}
                 <Text>{this.state.message ? this.state.message : "暂无数据"}</Text>
                 <TouchableOpacity style={{marginTop: 50}} onPress={this.refresh.bind(this)}>
@@ -265,15 +265,15 @@ export default class index extends React.Component {
                 return this.empty()
             }
             return (
-                <View style={Theme.ListView.styles.view}>
+                <View style={Theme.view}>
                     <ListView
                         ref={(c) => this.listView = c}
                         initialListSize={21}
                         renderRow={this.renderRow.bind(this)}
                         dataSource={this.state.dataRows}
                         pageSize={this.props.column}
-                        style={[Theme.ListView.styles.view, this.props.style]}
-                        contentContainerStyle={Theme.ListView.styles.contentContainerStyle}
+                        style={[Theme.view, this.props.style]}
+                        contentContainerStyle={Theme.contentContainerStyle}
                         onScroll={this.onScroll.bind(this)}
                         onEndReachedThreshold={50}
                         enableEmptySections={true}
@@ -289,7 +289,7 @@ export default class index extends React.Component {
                         }
                     >
                     </ListView>
-                    {this.state.indicator ? <ActivityIndicator style={Theme.ListView.styles.indicator}/> : null }
+                    {this.state.indicator ? <ActivityIndicator style={Theme.indicator}/> : null }
                 </View>
             )
         }

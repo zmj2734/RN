@@ -7,7 +7,8 @@ import {
 
 export default StyleSheet.create({
     view: {
-        flex: 1
+        flex: 1,
+        backgroundColor:"white"
     },
     itemRowLine: {
         height: 0.5,
@@ -30,5 +31,11 @@ export default StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center"
+    },
+    contentContainerStyle: {
+        justifyContent: 'flex-start',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'flex-start',
     }
 })

@@ -7,12 +7,16 @@ import {
     View,
     Text
 } from "react-native"
-import ListView from "../../../component/high/ListView"
-import Header from '../../../component/basic/HeaderNavigation';
+import ListView from "../../src/listView/index2"
 import Image from 'react-native-image-progress' ;
 import * as Progress from 'react-native-progress' ;
-let localImage = require("../../../../assets/image/banner01.jpg")
+let localImage = require("../../image/banner01.jpg")
 export default class index extends React.Component {
+
+    static navigationOptions = {
+        mode : 'card',
+    }
+
 
     constructor() {
         super()
@@ -98,25 +102,9 @@ export default class index extends React.Component {
         }
         callBack(this.data)
     }
-
-
-
-    goback(){
-        const {navigator} = this.props;
-        if (navigator) {
-            navigator.pop();
-        }
-    }
-
     render() {
         return (
             <View style={{flex : 1 ,backgroundColor:"white"}}>
-                <Header
-                    centerText='ListView'
-                    leftButtonFun={() => {
-                        this.goback()
-                    }}
-                />
                 {
                     this.state.data ?
                         <ListView renderRow={this.renderRow.bind(this)}

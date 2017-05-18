@@ -33,6 +33,11 @@ export default class index extends React.Component {
         navigate("ListView")
     }
 
+    gridView () {
+        const { navigate } = this.props.navigation;
+        navigate("GridView")
+    }
+
     fileUpload(){
         const { navigate } = this.props.navigation;
         navigate("FileUpload")
@@ -76,6 +81,11 @@ export default class index extends React.Component {
                 <View style={styles.buttonContents}>
                     <TouchableOpacity onPress={this.listView.bind(this)}>
                         <Text style={styles.rowText}>listView</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.gridView.bind(this)}>
+                        <Text style={styles.rowText}>gridView</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.buttonContents}>
