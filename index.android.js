@@ -8,6 +8,6 @@ import {
   AppRegistry,
 } from 'react-native';
 
-import app from "./src/main/navigator"
+import app from "./demo/main/navigator"
 
 AppRegistry.registerComponent('ZmjProjectDemo', () => app);

@@ -41,6 +41,7 @@
 		CC3843603CD5433CB8FEFA63 /* libRCTWKWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 464A9E49D15E45C9B307DCDC /* libRCTWKWebView.a */; };
 		3A9C38BE11684FA190F11F70 /* libBaiduMapLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB61C638B5A4EC0BF8A0537 /* libBaiduMapLibrary.a */; };
 		FE4389CD8EBF4070B12E54C6 /* libRCTHotUpdate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE98975F5FE4409AAF345E4 /* libRCTHotUpdate.a */; };
+		28CE55BC42924B2483F988EA /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D3F28D2C5447EA8A5EC6E0 /* libRCTActionSheet.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -272,6 +273,9 @@
 		6CB61C638B5A4EC0BF8A0537 /* libBaiduMapLibrary.a */ = {isa = PBXFileReference; name = "libBaiduMapLibrary.a"; path = "libBaiduMapLibrary.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		22E6CB07869A418FB69C9418 /* RCTHotUpdate.xcodeproj */ = {isa = PBXFileReference; name = "RCTHotUpdate.xcodeproj"; path = "../node_modules/react-native-update/ios/RCTHotUpdate.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		BAE98975F5FE4409AAF345E4 /* libRCTHotUpdate.a */ = {isa = PBXFileReference; name = "libRCTHotUpdate.a"; path = "libRCTHotUpdate.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		8A7AAB0D1A754FC8925008D3 /* zmj2734_react_native.xcodeproj */ = {isa = PBXFileReference; name = "zmj2734_react_native.xcodeproj"; path = "../node_modules/zmj2734-react-native/ios/zmj2734_react_native.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		66D3F28D2C5447EA8A5EC6E0 /* libRCTActionSheet.a */ = {isa = PBXFileReference; name = "libRCTActionSheet.a"; path = "libRCTActionSheet.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		E5065CD669D1419AB7853C83 /* zmjPluginDemo.xcodeproj */ = {isa = PBXFileReference; name = "zmjPluginDemo.xcodeproj"; path = "../node_modules/zmj_plugin_demo/ios/zmjPluginDemo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,7 @@
 				CC3843603CD5433CB8FEFA63 /* libRCTWKWebView.a in Frameworks */,
 				3A9C38BE11684FA190F11F70 /* libBaiduMapLibrary.a in Frameworks */,
 				FE4389CD8EBF4070B12E54C6 /* libRCTHotUpdate.a in Frameworks */,
+				28CE55BC42924B2483F988EA /* libRCTActionSheet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +481,8 @@
 				45D6DAA289B7441687900470 /* RCTWKWebView.xcodeproj */,
 				4993BB48571A40039D3D19A0 /* BaiduMapLibrary.xcodeproj */,
 				22E6CB07869A418FB69C9418 /* RCTHotUpdate.xcodeproj */,
+				8A7AAB0D1A754FC8925008D3 /* zmj2734_react_native.xcodeproj */,
+				E5065CD669D1419AB7853C83 /* zmjPluginDemo.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1009,6 +1016,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1018,6 +1026,8 @@
 					"$(SRCROOT)\..\node_modules\react-native-wkwebview-reborn\ios\RCTWKWebView",
 					"$(SRCROOT)\..\node_modules\react-native-baidumapkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-update\ios\RCTHotUpdate/**",
+					"$(SRCROOT)\..\node_modules\zmj2734-react-native\ios\zmj2734_react_native",
+					"$(SRCROOT)\..\node_modules\zmj_plugin_demo\ios\zmjPluginDemo",
 				);
 			};
 			name = Debug;
@@ -1044,6 +1054,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1053,6 +1064,8 @@
 					"$(SRCROOT)\..\node_modules\react-native-wkwebview-reborn\ios\RCTWKWebView",
 					"$(SRCROOT)\..\node_modules\react-native-baidumapkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-update\ios\RCTHotUpdate/**",
+					"$(SRCROOT)\..\node_modules\zmj2734-react-native\ios\zmj2734_react_native",
+					"$(SRCROOT)\..\node_modules\zmj_plugin_demo\ios\zmjPluginDemo",
 				);
 			};
 			name = Release;
@@ -1080,6 +1093,8 @@
 					"$(SRCROOT)\..\node_modules\react-native-wkwebview-reborn\ios\RCTWKWebView",
 					"$(SRCROOT)\..\node_modules\react-native-baidumapkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-update\ios\RCTHotUpdate/**",
+					"$(SRCROOT)\..\node_modules\zmj2734-react-native\ios\zmj2734_react_native",
+					"$(SRCROOT)\..\node_modules\zmj_plugin_demo\ios\zmjPluginDemo",
 				);
 			};
 			name = Debug;
@@ -1106,6 +1121,8 @@
 					"$(SRCROOT)\..\node_modules\react-native-wkwebview-reborn\ios\RCTWKWebView",
 					"$(SRCROOT)\..\node_modules\react-native-baidumapkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-update\ios\RCTHotUpdate/**",
+					"$(SRCROOT)\..\node_modules\zmj2734-react-native\ios\zmj2734_react_native",
+					"$(SRCROOT)\..\node_modules\zmj_plugin_demo\ios\zmjPluginDemo",
 				);
 			};
 			name = Release;
@@ -1141,6 +1158,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1150,6 +1168,8 @@
 					"$(SRCROOT)\..\node_modules\react-native-wkwebview-reborn\ios\RCTWKWebView",
 					"$(SRCROOT)\..\node_modules\react-native-baidumapkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-update\ios\RCTHotUpdate/**",
+					"$(SRCROOT)\..\node_modules\zmj2734-react-native\ios\zmj2734_react_native",
+					"$(SRCROOT)\..\node_modules\zmj_plugin_demo\ios\zmjPluginDemo",
 				);
 			};
 			name = Debug;
@@ -1185,6 +1205,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1194,6 +1215,8 @@
 					"$(SRCROOT)\..\node_modules\react-native-wkwebview-reborn\ios\RCTWKWebView",
 					"$(SRCROOT)\..\node_modules\react-native-baidumapkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-update\ios\RCTHotUpdate/**",
+					"$(SRCROOT)\..\node_modules\zmj2734-react-native\ios\zmj2734_react_native",
+					"$(SRCROOT)\..\node_modules\zmj_plugin_demo\ios\zmjPluginDemo",
 				);
 			};
 			name = Release;
@@ -1224,6 +1247,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1248,6 +1272,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

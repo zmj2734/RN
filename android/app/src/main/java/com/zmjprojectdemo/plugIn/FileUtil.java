@@ -26,7 +26,7 @@ import java.io.IOException;
  */
 
 @ReactModule(name = "FileUtil")
-public class FileUtil extends ReactContextBaseJavaModule  {
+public class FileUtil extends ReactContextBaseJavaModule {
 
     private static final int IMAGE_PICKER_REQUEST = 1000;
     private static final String E_ACTIVITY_DOES_NOT_EXIST = "E_ACTIVITY_DOES_NOT_EXIST";
@@ -50,9 +50,9 @@ public class FileUtil extends ReactContextBaseJavaModule  {
                         if (uri == null) {
                             mPickerPromise.reject(E_NO_IMAGE_DATA_FOUND, "No image data found");
                         } else {
-                            JSONObject object = new JSONObject() ;
+                            JSONObject object = new JSONObject();
                             try {
-                                object.put("fileUrl" ,uri.toString()) ;
+                                object.put("fileUrl", uri.toString());
                                 mPickerPromise.resolve(object.toString());
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -105,28 +105,27 @@ public class FileUtil extends ReactContextBaseJavaModule  {
     }
 
     /**
-     *
      * @param imgPath
      * @return
      */
-    public  String imgToBase64(String imgPath,String imgFormat) {
-        Bitmap bitmap = null ;
-        if (imgPath !=null && imgPath.length() > 0) {
+    public String imgToBase64(String imgPath, String imgFormat) {
+        Bitmap bitmap = null;
+        if (imgPath != null && imgPath.length() > 0) {
             bitmap = readBitmap(imgPath);
         }
-        if(bitmap == null){
-            return "文件转换失败" ;
+        if (bitmap == null) {
+            return "文件转换失败";
         }
         ByteArrayOutputStream out = null;
         try {
             out = new ByteArrayOutputStream();
-            if(imgFormat.toLowerCase().equals("png")){
+            if (imgFormat.toLowerCase().equals("png")) {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
             }
-            if(imgFormat.toLowerCase().equals("jpeg")){
+            if (imgFormat.toLowerCase().equals("jpeg")) {
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
             }
-            if(imgFormat.toLowerCase().equals("webp")){
+            if (imgFormat.toLowerCase().equals("webp")) {
                 bitmap.compress(Bitmap.CompressFormat.WEBP, 100, out);
             }
 
@@ -149,13 +148,13 @@ public class FileUtil extends ReactContextBaseJavaModule  {
         }
     }
 
-    private  Bitmap readBitmap(String imgPath) {
+    private Bitmap readBitmap(String imgPath) {
         try {
             return BitmapFactory.decodeFile(imgPath);
         } catch (Exception e) {
             // TODO Auto-generated catch block
         }
-        return null ;
+        return null;
     }
 
 }

@@ -16,6 +16,7 @@ import java.util.List;
 
 import cn.reactnative.modules.update.UpdateContext;
 import cn.reactnative.modules.update.UpdatePackage;
+import www.zmj.com.zmjpulgindemo.ZmjPluginPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -29,6 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+                    new ZmjPluginPackage(),
                     new UpdatePackage(),
                     new BaiduMapPackage(getApplicationContext()),
                     new RNFetchBlobPackage(),
@@ -37,7 +39,7 @@ public class MainApplication extends Application implements ReactApplication {
         }
 
         @Override
-        protected  String getJSBundleFile(){
+        protected String getJSBundleFile() {
             return UpdateContext.getBundleUrl(MainApplication.this);
         }
 
