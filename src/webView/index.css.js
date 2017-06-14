@@ -15,10 +15,10 @@ export default StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        height: Dimensions.get('window').height,
+        height: "100%",
     },
     fullWidth: {
-        width: Dimensions.get("window").width,
+        width: "100%",
         height: 2,
     }
 });

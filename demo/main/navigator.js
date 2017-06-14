@@ -9,7 +9,7 @@ import {StackNavigator} from 'react-navigation';
 import HomeScreen from "./index"
 import MapView from "../../src/baiduMap"
 import FileDown from "../../src/file/down"
-import FileUpload from "../../src/file/upload"
+import FileUpload from "../../src/file/down"
 import Progress from "../../src/progress"
 import WebView from "./webView"
 import CircelButton from "../../src/circle"
@@ -32,7 +32,7 @@ let AppNavigator = StackNavigator({
     },
     {
         initialRouteName: 'Index',
-        headerMode: 'none',
+        //headerMode: 'none',
         navigationOptions: {
             cardStack: {
                 gesturesEnabled: true

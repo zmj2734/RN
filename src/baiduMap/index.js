@@ -22,7 +22,7 @@ export default class BaiduMapView extends React.Component {
             longitude: 116.403945,
             latitude: 39.91506
         },
-        trafficEnabled: false,               //是否显示路况图层
+        trafficEnabled: true,               //是否显示路况图层
         baiduHeatMapEnabled: false,
         markers: [{
             longitude: 116.403945,
@@ -53,7 +53,7 @@ export default class BaiduMapView extends React.Component {
     }
 
     componentDidMount() {
-        var _this = this
+        let _this = this ;
         Geolocation.getCurrentPosition().then(position => {
             _this.setState({
                 zoom: 19,
@@ -113,8 +113,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     },
     map: {
-        width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
-        marginBottom: 25,
+        width: "100%",
+        height: "100%" ,
     }
 });
