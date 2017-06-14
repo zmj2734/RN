@@ -4,6 +4,10 @@ import android.app.Application;
 
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.facebook.react.ReactApplication;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import www.zmj.com.zmjpulgindemo.ZmjPluginPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.cboy.rn.splashscreen.SplashScreenReactPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -30,6 +34,10 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+            new RCTCameraPackage(),
+            new ZmjPluginPackage(),
+            new VectorIconsPackage(),
+            new SplashScreenReactPackage(),
                     new ZmjPluginPackage(),
                     new UpdatePackage(),
                     new BaiduMapPackage(getApplicationContext()),

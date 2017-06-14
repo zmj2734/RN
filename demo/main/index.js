@@ -8,14 +8,23 @@ import {
     TouchableOpacity,
     Text,
     StyleSheet,
+    Platform
 } from "react-native"
 
-import Tost from "zmj_plugin_demo"
+import Screen from "react-native-splash-screen"
 
 export default class index extends React.Component {
 
+    static  navigationOptions = {
+        title: '主页',
+    };
+
     constructor(){
         super()
+    }
+
+    componentDidMount(){
+        Screen.hide()
     }
 
     toBaiduMap(){
@@ -39,6 +48,10 @@ export default class index extends React.Component {
     }
 
     fileUpload(){
+        if(Platform.OS === "ios"){
+            alert("IOS版待开发")
+            return
+        }
         const { navigate } = this.props.navigation;
         navigate("FileUpload")
     };
@@ -61,10 +74,16 @@ export default class index extends React.Component {
         const { navigate } = this.props.navigation;
         navigate("Update")
     }
-    async npmDemo(){
-        Tost.init() ;
-        console.log(Tost)
+
+    textField(){
+        const { navigate } = this.props.navigation;
+        navigate("TextField")
     }
+    camera(){
+        const { navigate } = this.props.navigation;
+        navigate("Camera")
+    }
+
     render() {
         return (
             <ScrollView style={styles.listView}>
@@ -114,8 +133,13 @@ export default class index extends React.Component {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.buttonContents}>
-                    <TouchableOpacity onPress={this.npmDemo.bind(this)}>
-                        <Text style={styles.rowText}>npm插件demo</Text>
+                    <TouchableOpacity onPress={this.textField.bind(this)}>
+                        <Text style={styles.rowText}>TextField</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.camera.bind(this)}>
+                        <Text style={styles.rowText}>相机</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

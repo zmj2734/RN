@@ -22,9 +22,17 @@ export default class progress extends React.Component {
         this.start()
     }
 
+    componentWillUnmount() {
+        // 请注意Un"m"ount的m是小写
+
+        // 如果存在this.timer，则使用clearTimeout清空。
+        // 如果你使用多个timer，那么用多个变量，或者用个数组来保存引用，然后逐个clear
+        this.timer && clearTimeout(this.timer);
+    }
+
     start() {
-        var _this = this
-        var time = setTimeout(function () {
+        const _this = this
+        const time = this.timer = setTimeout(function () {
             console.log(_this.state.progressNum)
             if (_this.state.progressNum >= 1) {
                 clearTimeout(time)
@@ -34,7 +42,7 @@ export default class progress extends React.Component {
             _this.setState({
                 progressNum: _this.state.progressNum + 0.1
             })
-        }, 1000)
+        }, 100)
     }
 
     render() {

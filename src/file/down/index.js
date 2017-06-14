@@ -13,31 +13,47 @@ import {
 import RNFetchBlob from 'react-native-fetch-blob'
 import * as Progress from 'react-native-progress';
 
+let fetchBolb;
+
 export default class down extends React.Component {
 
-    constructor(){
+    constructor() {
         super()
+
+        RNFetchBlob.config({
+            fileCache: true,
+        })
+
         this.state = {
-            progressNum : 0
+            progressNum: 0
         }
     }
 
+    componentWillUnmount() {
+        this.fileCancel()
+    }
+
+    fileCancel(){
+        fetchBolb.cancel((err) => {
+        })
+    }
+
     down() {
-        const _this = this ;
-        RNFetchBlob.config({
-            fileCache: true,
-        }).fetch('GET', 'http://dldir1.qq.com/qqfile/qq/QQ8.9.1/20453/QQ8.9.1.exe', {
+        const _this = this;
+        fetchBolb = RNFetchBlob.fetch('GET', 'https://dldir1.qq.com/qqfile/qq/QQ8.9.1/20453/QQ8.9.1.exe', {
             Authorization: 'dvgdgbdkhgiahugiauerhiu',
-        }).progress((received, total) => {
+        })
+
+        fetchBolb.progress((received, total) => {
             _this.setState({
-                progressNum : received / total
+                progressNum: received / total
             })
-        }).
-        then((res) => {
+        }).then((res) => {
             _this.setState({
-                progressNum : 1
+                progressNum: 1
             })
         }).catch((errorMessage, statusCode) => {
+            _this.fileCancel()
         })
     }
 
@@ -50,7 +66,7 @@ export default class down extends React.Component {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.buttonContents}>
-                    <Progress.Pie progress={this.state.progressNum} size={50} />
+                    <Progress.Pie progress={this.state.progressNum} size={50}/>
                 </View>
             </View>
         )
