@@ -18,6 +18,7 @@ import ListView from "../listView"
 import Update from "../../src/update"
 import TextField from "../../src/TextField"
 import Camera from "../../src/camera"
+import BarCode from "../../src/barCode"
 
 let AppNavigator = StackNavigator({
         Index: {screen: HomeScreen},
@@ -31,7 +32,8 @@ let AppNavigator = StackNavigator({
         Update: {screen: Update},
         GridView: {screen: GridView} ,
         TextField : {screen : TextField} ,
-        Camera : {screen : Camera}
+        Camera : {screen : Camera},
+        BarCode : {screen : BarCode}
     },
     {
         initialRouteName: 'Index',

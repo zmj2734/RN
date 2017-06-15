@@ -84,6 +84,11 @@ export default class index extends React.Component {
         navigate("Camera")
     }
 
+    barcode(){
+        const { navigate } = this.props.navigation;
+        navigate("BarCode")
+    }
+
     render() {
         return (
             <ScrollView style={styles.listView}>
@@ -140,6 +145,11 @@ export default class index extends React.Component {
                 <View style={styles.buttonContents}>
                     <TouchableOpacity onPress={this.camera.bind(this)}>
                         <Text style={styles.rowText}>相机</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.barcode.bind(this)}>
+                        <Text style={styles.rowText}>扫描</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

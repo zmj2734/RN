@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.facebook.react.ReactApplication;
+import com.imagepicker.ImagePickerPackage;
+import com.reactnativecomponent.barcode.RCTCapturePackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import www.zmj.com.zmjpulgindemo.ZmjPluginPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -34,6 +36,8 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+            new ImagePickerPackage(),
+            new RCTCapturePackage(),
             new RCTCameraPackage(),
             new ZmjPluginPackage(),
             new VectorIconsPackage(),
