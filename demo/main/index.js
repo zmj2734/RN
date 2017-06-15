@@ -47,6 +47,16 @@ export default class index extends React.Component {
         navigate("GridView")
     }
 
+    imagePicker(){
+        const { navigate } = this.props.navigation;
+        navigate("ImagePicker")
+    }
+
+    bigImage(){
+        const { navigate } = this.props.navigation;
+        navigate("BigImage")
+    }
+
     fileUpload(){
         if(Platform.OS === "ios"){
             alert("IOS版待开发")
@@ -89,6 +99,11 @@ export default class index extends React.Component {
         navigate("BarCode")
     }
 
+    banner(){
+        const { navigate } = this.props.navigation;
+        navigate("Banner")
+    }
+
     render() {
         return (
             <ScrollView style={styles.listView}>
@@ -115,6 +130,16 @@ export default class index extends React.Component {
                 <View style={styles.buttonContents}>
                     <TouchableOpacity onPress={this.progress.bind(this)}>
                         <Text style={styles.rowText}>进度条</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.imagePicker.bind(this)}>
+                        <Text style={styles.rowText}>图片选择</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.bigImage.bind(this)}>
+                        <Text style={styles.rowText}>大图预览</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.buttonContents}>
@@ -150,6 +175,11 @@ export default class index extends React.Component {
                 <View style={styles.buttonContents}>
                     <TouchableOpacity onPress={this.barcode.bind(this)}>
                         <Text style={styles.rowText}>扫描</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.banner.bind(this)}>
+                        <Text style={styles.rowText}>Banner</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

@@ -34,7 +34,7 @@ export default class down extends React.Component {
     }
 
     fileCancel(){
-        fetchBolb.cancel((err) => {
+        fetchBolb && fetchBolb.cancel((err) => {
         })
     }
 

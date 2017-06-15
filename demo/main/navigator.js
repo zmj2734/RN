@@ -19,6 +19,9 @@ import Update from "../../src/update"
 import TextField from "../../src/TextField"
 import Camera from "../../src/camera"
 import BarCode from "../../src/barCode"
+import ImagePicker from "../../src/file/imagePicker"
+import BigImage from "../../src/file/bigImage"
+import Banner from "../../src/banner"
 
 let AppNavigator = StackNavigator({
         Index: {screen: HomeScreen},
@@ -33,7 +36,10 @@ let AppNavigator = StackNavigator({
         GridView: {screen: GridView} ,
         TextField : {screen : TextField} ,
         Camera : {screen : Camera},
-        BarCode : {screen : BarCode}
+        BarCode : {screen : BarCode},
+        ImagePicker : {screen : ImagePicker},
+        BigImage : {screen : BigImage},
+        Banner : {screen : Banner}
     },
     {
         initialRouteName: 'Index',
