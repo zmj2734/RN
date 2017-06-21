@@ -22,6 +22,7 @@ import BarCode from "../../src/barCode"
 import ImagePicker from "../../src/file/imagePicker"
 import BigImage from "../../src/file/bigImage"
 import Banner from "../../src/banner"
+import ChartsWrapper from "../../src/chartsWrapper"
 
 let AppNavigator = StackNavigator({
         Index: {screen: HomeScreen},
@@ -39,7 +40,8 @@ let AppNavigator = StackNavigator({
         BarCode : {screen : BarCode},
         ImagePicker : {screen : ImagePicker},
         BigImage : {screen : BigImage},
-        Banner : {screen : Banner}
+        Banner : {screen : Banner},
+        ChartsWrapper : { screen : ChartsWrapper}
     },
     {
         initialRouteName: 'Index',

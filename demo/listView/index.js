@@ -7,7 +7,7 @@ import {
     View,
     Text
 } from "react-native"
-import ListView from "../../src/listView/index2"
+import ListView from "../../src/listView/index"
 import Image from 'react-native-image-progress' ;
 import * as Progress from 'react-native-progress' ;
 let localImage = require("../../image/banner01.jpg")

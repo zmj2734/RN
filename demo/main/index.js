@@ -104,6 +104,11 @@ export default class index extends React.Component {
         navigate("Banner")
     }
 
+    charts(){
+        const { navigate } = this.props.navigation;
+        navigate("ChartsWrapper")
+    }
+
     render() {
         return (
             <ScrollView style={styles.listView}>
@@ -180,6 +185,11 @@ export default class index extends React.Component {
                 <View style={styles.buttonContents}>
                     <TouchableOpacity onPress={this.banner.bind(this)}>
                         <Text style={styles.rowText}>Banner</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.buttonContents}>
+                    <TouchableOpacity onPress={this.charts.bind(this)}>
+                        <Text style={styles.rowText}>图表</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

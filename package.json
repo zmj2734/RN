@@ -9,13 +9,14 @@
     "ios": "react-native run-ios"
   },
   "dependencies": {
-    "from": "^0.1.7",
-    "import": "0.0.6",
+    "immutability-helper": "^2.2.2",
     "react": "16.0.0-alpha.6",
-    "react-native": "0.43.4",
+    "react-addons-update": "^15.6.0",
+    "react-native": "0.44.2",
     "react-native-baidu-map": "^0.6.0",
     "react-native-banner": "^0.1.0",
     "react-native-camera": "^0.9.0",
+    "react-native-charts-wrapper": "^0.2.10",
     "react-native-circle-button": "^1.0.6",
     "react-native-fetch-blob": "^0.10.4",
     "react-native-image-picker": "^0.26.3",
@@ -28,8 +29,7 @@
     "react-native-splash-screen": "^2.1.0",
     "react-native-update": "^4.0.5",
     "react-native-vector-icons": "^4.2.0",
-    "react-navigation": "^1.0.0-beta.7",
-    "zmj_plugin_demo": "^1.0.0"
+    "react-navigation": "^1.0.0-beta.7"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",

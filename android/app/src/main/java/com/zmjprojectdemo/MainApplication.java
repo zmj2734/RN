@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.facebook.react.ReactApplication;
+import com.github.wuxudong.rncharts.MPAndroidChartPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.reactnativecomponent.barcode.RCTCapturePackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
@@ -36,6 +37,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+            new MPAndroidChartPackage(),
             new ImagePickerPackage(),
             new RCTCapturePackage(),
             new RCTCameraPackage(),
